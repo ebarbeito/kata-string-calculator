@@ -16,6 +16,8 @@ class StringCalculator
             return (int)$numbers;
         }
 
-        return $numbers[0] + $numbers[2];
+        return array_sum(
+          explode(self::DELIMITER, $numbers)
+        );
     }
 }

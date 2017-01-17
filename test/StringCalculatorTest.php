@@ -27,6 +27,8 @@ class StringCalculatorTest extends \PHPUnit_Framework_TestCase
     public function test_two_numbers_shoud_return_their_sum()
     {
         $this->assertEquals(12, $this->calculator->Add('8,4'));
+
+        $this->assertEquals(288, $this->calculator->Add('32,256'));
     }
 
     public function test_Add_method_should_have_commutative_property()
