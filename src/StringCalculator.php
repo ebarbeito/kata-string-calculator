@@ -6,6 +6,11 @@ class StringCalculator
 {
     const DELIMITER = ',';
 
+    /**
+     * @param string $numbers
+     *
+     * @return int
+     */
     public function Add(string $numbers): int
     {
         if ('' === $numbers) {
