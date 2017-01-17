@@ -12,5 +12,12 @@ class StringCalculatorTest extends \PHPUnit_Framework_TestCase
 
         $this->assertEquals(0, $calculator->Add(''));
     }
+
+    public function test_single_number_should_return_same_number()
+    {
+        $calculator = new StringCalculator();
+
+        $this->assertEquals(8, $calculator->Add('8'));
+    }
 }
 
