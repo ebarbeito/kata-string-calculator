@@ -23,5 +23,9 @@ class StringCalculatorTest extends \PHPUnit_Framework_TestCase
     {
         $this->assertEquals(8, $this->calculator->Add('8'));
     }
-}
 
+    public function test_two_numbers_shoud_return_their_sum()
+    {
+        $this->assertEquals(12, $this->calculator->Add('8,4'));
+    }
+}

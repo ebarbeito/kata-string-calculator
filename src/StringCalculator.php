@@ -10,6 +10,10 @@ class StringCalculator
             return 0;
         }
 
-        return (int)$numbers;
+        if (false === strpos($numbers, ',')) {
+            return (int)$numbers;
+        }
+
+        return $numbers[0] + $numbers[2];
     }
 }
