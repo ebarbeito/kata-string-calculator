@@ -35,8 +35,8 @@ class StringCalculatorTest extends \PHPUnit_Framework_TestCase
         $four = 4;
 
         $this->assertEquals(
-          $this->calculator->Add(sprintf('%d,%d', $eight, $four)),
-          $this->calculator->Add(sprintf('%d,%d', $four, $eight))
+          $this->calculator->Add(sprintf('%d%s%d', $eight, StringCalculator::DELIMITER, $four)),
+          $this->calculator->Add(sprintf('%d%s%d', $four, StringCalculator::DELIMITER, $eight))
         );
     }
 }
