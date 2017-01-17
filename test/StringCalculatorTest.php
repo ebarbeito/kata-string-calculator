@@ -6,18 +6,22 @@ use KataStringCalculator\StringCalculator;
 
 class StringCalculatorTest extends \PHPUnit_Framework_TestCase
 {
-    public function test_empty_string_should_be_zero()
-    {
-        $calculator = new StringCalculator();
+    /** @var StringCalculator */
+    private $calculator;
 
-        $this->assertEquals(0, $calculator->Add(''));
+    protected function setUp()
+    {
+        $this->calculator = new StringCalculator();
+    }
+
+    public function test_empty_number_should_return_zero()
+    {
+        $this->assertEquals(0, $this->calculator->Add(''));
     }
 
     public function test_single_number_should_return_same_number()
     {
-        $calculator = new StringCalculator();
-
-        $this->assertEquals(8, $calculator->Add('8'));
+        $this->assertEquals(8, $this->calculator->Add('8'));
     }
 }
 
