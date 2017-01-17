@@ -28,4 +28,15 @@ class StringCalculatorTest extends \PHPUnit_Framework_TestCase
     {
         $this->assertEquals(12, $this->calculator->Add('8,4'));
     }
+
+    public function test_Add_method_should_have_commutative_property()
+    {
+        $eight = 8;
+        $four = 4;
+
+        $this->assertEquals(
+          $this->calculator->Add(sprintf('%d,%d', $eight, $four)),
+          $this->calculator->Add(sprintf('%d,%d', $four, $eight))
+        );
+    }
 }
